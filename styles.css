@@ -1,0 +1,100 @@
+body {
+    background: black;
+    color: white;
+    position: relative;
+}
+
+/* Styling Nickname */
+
+.nickname {
+    display: block;
+    text-align: center;
+    margin: 50px 0 0;
+    font-size: 80px;
+}
+
+/* Game Setup */
+
+
+.playerDiv {
+    display: inline-flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 50px;
+}
+
+.playerDiv img, .botDiv img {
+    max-width: 100%;
+    height: 150px;
+    margin: 0 100px;
+    padding: 25px;
+}
+
+.playerDiv img:hover {
+    transform: scale(1.2);
+    transition: 1000ms;
+    border: 1px solid white;
+}
+
+.rock-div, .paper-div, .scissors-div {
+    background: rgba(0,0, 0, 0.1);
+    margin-top: 50px;
+}
+
+.botDiv {
+    display: inline-flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 50px;
+}
+
+/* Scores */
+
+
+.score {
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    align-items: center;
+
+}
+
+.score h1 {
+    padding: 50px;
+    font-size: 200px;
+}
+
+.score .scoreCount {
+    font-size: 100px;
+}
+
+.playerScore, .botScore {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    width: 200px;
+    height: 200px;
+    
+}
+
+/* Mobile */
+
+
+@media (max-width: 1500px) {
+    .playerDiv, .botDiv {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: static;
+        justify-content: center;
+        margin: auto;
+    }
+}
+@media (max-width: 800px) {
+    .score {
+        flex-direction: column;
+    }
+}
