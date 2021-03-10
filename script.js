@@ -56,7 +56,7 @@ function game() {
             playerScore.textContent = playerScoreCount;
             console.log(computerMove());
         }
-        else if(botScoreCount === 5|| playerScoreCount === 5) {
+        else if(botScoreCount >= 4|| playerScoreCount >= 4) {
             botScoreCount = 0;
             botScore.textContent = botScoreCount;
             playerScoreCount = 0;
@@ -75,7 +75,7 @@ function game() {
             playerScore.textContent = playerScoreCount;
             console.log(computerMove());
         }
-        else if(botScoreCount === 5|| playerScoreCount === 5) {
+        else if(botScoreCount >= 4|| playerScoreCount >= 4) {
             botScoreCount = 0;
             botScore.textContent = botScoreCount;
             playerScoreCount = 0;
@@ -95,7 +95,7 @@ function game() {
             console.log(computerMove());
         
         }
-        else if(botScoreCount === 5|| playerScoreCount === 5) {
+        else if(botScoreCount >=4|| playerScoreCount >= 4) {
             botScoreCount = 0;
             botScore.textContent = botScoreCount;
             playerScoreCount = 0;
