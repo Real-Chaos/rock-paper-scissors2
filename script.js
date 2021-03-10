@@ -12,19 +12,7 @@ const playerRock = document.querySelector('.playerRock');
 const playerPaper = document.querySelector('.playerPaper');
 const playerScissors = document.querySelector('.playerScissors');
 let playersMove = null;
-// // function playerMove() {
-// //     playerRock.addEventListener('click', ()=> {
-// //         playersMove = playerRock;
-// //         computerMove();
-// //     })
-// //     playerPaper.addEventListener('click', ()=> {
-// //         computerMove();
-// //     })
-// //     playerScissors.addEventListener('click', ()=> {
-// //         computerMove();
-// //     })
-// // }
-// playerMove();
+
 
 // Computer Move
 const rock = document.querySelector('.rock');
@@ -48,8 +36,7 @@ function computerMove() {
     return computerSelection;
 }
 
-// console.log(computerMove());
-// One Round
+
 let botScore = document.querySelector('.botScoreCount');
 let botScoreCount = Number(botScore.textContent);
 
@@ -123,39 +110,4 @@ function game() {
 game();
 
 
-// // Game 
-// let botScore = document.querySelector('.botScoreCount');
-// let botScoreCount = Number(botScore.textContent);
-// console.log(typeof botScoreCount);
-
-// let playerScore = document.querySelector('.playerScoreCount');
-// let playerScoreCount = Number(botScore.textContent);
-// console.log(typeof playerScoreCount);
-
-// function playRound() {
-//     playerRock.addEventListener('click', () => {
-//         if(computerChoice === document.querySelector('.paper')) {
-//             botScoreCount++;
-//             botScore.textContent = botScoreCount;
-//             computerMove();
-//             console.log(botScore);       
-//         }
-//     });
-//     playerPaper.addEventListener('click', ()=> {
-//         if(computerChoice === document.querySelector('.scissors')) {
-//             botScoreCount++;
-//             botScore.textContent = botScoreCount;
-//             computerMove();
-        
-//         }
-//     });
-//     playerScissors.addEventListener('click', () => {
-//         if(computerChoice === document.querySelector('.rock')) {
-//             botScoreCount++
-//             botScore.textContent = botScoreCount;
-//             computerMove();
-//         }
-//     })
-// }
-// playRound();
 
