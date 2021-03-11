@@ -42,17 +42,20 @@ playerRock.addEventListener('click', () => {
         botScoreCount++;
         botScore.textContent = botScoreCount;
         result.textContent = `Computer chose ${computerSelection}! You lose.`;
+        winner();
     }
 
     else if(computerSelection === 'scissors') {
         playerScoreCount++;
         playerScore.textContent = playerScoreCount;
         result.textContent = `Computer chose ${computerSelection}! You win.`;
+        winner();
 
     }
 
     else if(computerSelection === 'rock') {
         result.textContent = `Computer chose ${computerSelection}! Tie.`;
+        winner();
     }
         
 });
@@ -64,6 +67,7 @@ playerPaper.addEventListener('click', ()=> {
         botScoreCount++;
         botScore.textContent = botScoreCount;
         result.textContent = `Computer chose ${computerSelection}! You lose.`;
+        winner();
 
     }
 
@@ -71,10 +75,12 @@ playerPaper.addEventListener('click', ()=> {
         playerScoreCount++;
         playerScore.textContent = playerScoreCount;
         result.textContent = `Computer chose ${computerSelection}! You win.`;
+        winner();
     }
 
     else if(computerSelection === 'paper') {
         result.textContent = `Computer chose ${computerSelection}! Tie.`;
+        winner();
     }
         
 });
@@ -86,21 +92,43 @@ playerScissors.addEventListener('click', ()=> {
         botScoreCount++;
         botScore.textContent = botScoreCount;
         result.textContent = `Computer chose ${computerSelection}! You lose.`;
+        winner();
     }
 
     else if(computerSelection === 'paper') {
         playerScoreCount++;
         playerScore.textContent = playerScoreCount;
         result.textContent = `Computer chose ${computerSelection}! You win.`;
+        winner();
     }
 
     else if(computerSelection === 'scissors') {
         result.textContent = `Computer chose ${computerSelection}! Tie.`;
+        winner();
     }
 
         
 });
 
+//Winner ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+function winner() {
+    if(playerScore.textContent === '5') {
+        const main = document.querySelector('main')
+        main.style.display = 'none'
+        let winner = document.querySelector('.winner');
+        winner.textContent = `${nickname.textContent} Won!`;
+        winner.style.opacity = '1';
+        
+      }
+      else if(botScore.textContent === '5') {
+        const main = document.querySelector('main')
+        main.style.display = 'none'
+        let winner = document.querySelector('.winner');
+        winner.textContent = 'Computer Won';
+        winner.style.opacity = '1';
+        }
+}
 
 
 
