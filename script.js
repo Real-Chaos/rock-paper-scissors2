@@ -18,6 +18,8 @@ const askNickname = String(prompt('Enter players nickname'));
 const nickname = document.querySelector('.nickname');
 nickname.textContent = askNickname;
 
+
+
 // Computer Move --------------------------------------------------------------------------------------------------------------------------------
 function computerMove() {
     let computerMove = Math.floor((Math.random() * 3) + 1);

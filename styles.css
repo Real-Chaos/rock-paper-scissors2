@@ -90,6 +90,8 @@ body {
     font-size: 200px;
 }
 
+
+
 .score .scoreCount {
     font-size: 100px;
 }
@@ -103,6 +105,15 @@ body {
     height: 200px;
     
 }
+.label {
+    display: flex;
+    justify-content: center;
+}
+
+.label h1 {
+    padding: 50px;
+    font-size: 100px;
+}
 
 /* Mobile */
 
@@ -115,9 +126,24 @@ body {
         justify-content: center;
         margin: auto;
     }
+    .label .botLabel {
+        position: absolute;
+        bottom: 500px;
+    }
+    
+}
+@media (max-width: 1499px) {
+    .label .botLabel {
+        position: absolute;
+        bottom: 200px;
+    }
 }
 @media (max-width: 800px) {
     .score {
         flex-direction: column;
+    }
+    .label .botLabel {
+        position: absolute;
+        bottom: 700px;
     }
 }
