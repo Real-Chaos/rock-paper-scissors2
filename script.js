@@ -11,6 +11,8 @@ let playerScore = document.querySelector('.playerScoreCount');
 let playerScoreCount = Number(playerScore.textContent);
 let result = document.querySelector('.result')
 
+const playAgain = document.querySelector('.again');
+
 // Create Nickname ----------------------------------------------------------------------------------------------------------------------------
 const askNickname = String(prompt('Enter players nickname'));
 const nickname = document.querySelector('.nickname');
@@ -110,26 +112,45 @@ playerScissors.addEventListener('click', ()=> {
         
 });
 
+
+
 //Winner ------------------------------------------------------------------------------------------------------------------------------------------------------
 
 function winner() {
     if(playerScore.textContent === '5') {
         const main = document.querySelector('main')
-        main.style.display = 'none'
+        main.style.opacity = '0'
         let winner = document.querySelector('.winner');
         winner.textContent = `${nickname.textContent} Won!`;
-        winner.style.opacity = '1';
-        
-      }
+        playAgain.textContent = 'Play Again';
+        playAgain.style.opacity = '1';
+    }
       else if(botScore.textContent === '5') {
         const main = document.querySelector('main')
-        main.style.display = 'none'
+        main.style.opacity = '0'
         let winner = document.querySelector('.winner');
         winner.textContent = 'Computer Won';
-        winner.style.opacity = '1';
+        playAgain.textContent = 'Play Again';
+        playAgain.style.opacity = '1';
         }
 }
 
+
+// Play Again -----------------------------------------------------------------------------------------------------------------------------------------------------
+
+playAgain.addEventListener('click', () => {
+    botScoreCount = 0;
+    playerScoreCount = 0;
+    playerScore.textContent = playerScoreCount;
+    botScore.textContent = botScoreCount;
+    const main = document.querySelector('main');
+    main.style.opacity = '1';
+    playAgain.textContent = '';
+    playAgain.style.opacity = '0';
+    let winner = document.querySelector('.winner');
+    winner.textContent = ``;
+
+});
 
 
 

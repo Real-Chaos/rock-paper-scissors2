@@ -57,10 +57,22 @@ body {
 }
 
 .winner {
-    opacity: 0;
+    
     text-align: center;
     font-size: 100px;
 
+}
+
+.again {
+    margin-top: 300px;
+    display: block;
+    margin: auto;
+    width: 40%;
+    border-radius: 30px;
+    height: 60px;
+    font-size: 40px;
+    outline: none;
+    opacity: 0;
 }
 /* Scores */
 
